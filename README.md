@@ -24,8 +24,16 @@ Git clone the project.
 
 Create Conda environment:
 
-    $ conda env create -f environment.yml
+    $ conda env create -f env.yml
 
 Activate the environment:
 
-    $ conda activate scan
+    $ conda activate pytorch12
+    
+
+## Download Metric Data
+
+Please download the following compressed file from: 
+
+
+Uncompress the downloaded file under the main project folder. The uncompressed folder name should be "cider".
