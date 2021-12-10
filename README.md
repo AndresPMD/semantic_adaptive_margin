@@ -31,9 +31,37 @@ Activate the environment:
     $ conda activate pytorch12
     
 
-## Download Metric Data
+## Download Additional Project Data
 
 Please download the following compressed file from: 
 
+https://drive.google.com/file/d/1DiRZODZQENoxbCpQFsiSEs1-9VatD176/view?usp=sharing
 
-Uncompress the downloaded file under the main project folder. The uncompressed folder name should be "cider".
+Uncompress the downloaded files under the main project folder. 
+
+## Download Features
+
+Download the dataset files (MS-COCO and Flickr30K). We use regions of visual features, similar as the one used by SCAN, downloaded [here](https://github.com/kuanghuei/SCAN). All the data needed for reproducing the experiments in the paper, including image features and vocabularies, can be downloaded from:
+```bash
+wget https://iudata.blob.core.windows.net/scan/data.zip
+wget https://iudata.blob.core.windows.net/scan/vocab.zip
+```
+In this implementation, we refer to the path of extracted files for `data.zip` as `$data_path` and files for `vocab.zip` to `./vocab_path` directory.
+
+## Reference
+
+If you found this research, metric proposed or code useful, please cite the following paper:
+
+```
+@article{biten2021image,
+  title={Is An Image Worth Five Sentences? A New Look into Semantics for Image-Text Matching},
+  author={Biten, Ali Furkan and Mafla, Andres and Gomez, Lluis and Karatzas, Dimosthenis},
+  journal={arXiv preprint arXiv:2110.02623},
+  year={2021}
+}
+
+```
+
+## License
+
+[Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0)
