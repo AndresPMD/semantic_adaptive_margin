@@ -63,8 +63,15 @@ python train_f30k.py --data_path "$DATA_PATH" --model_name "$PATH_TO_SAVE" --res
 ```
 
 ## Evaluate
-
-
+Run run_all.py to obtain the evaluation from our proposed metrics and standard Recall.
+E.a. Evaluate the model on Flickr30K:
+```bash
+python run_all.py --model "$PATH_TO_SAVED_MODEL"model_best.pth.tar --split test --dataset f30k
+```
+E.a. Evaluate the mode with the full 5K testset of MS-COCO:
+```bash
+python run_all.py --model "$PATH_TO_SAVED_MODEL"model_best.pth.tar --split testall --dataset coco
+```
 
 ## Reference
 
