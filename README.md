@@ -48,6 +48,24 @@ wget https://iudata.blob.core.windows.net/scan/vocab.zip
 ```
 In this implementation, we refer to the path of extracted files for `data.zip` as `$data_path` and files for `vocab.zip` to `./vocab_path` directory.
 
+## Training
+
+* Train MSCOCO models:
+Run `train_coco.py` using the SAM, e.a. using random sampling, metric margin division 6, weight on the cider loss 10 and on the 10% of the dataset:
+```bash
+python train_coco.py --data_path "$DATA_PATH" --model_name "$PATH_TO_SAVE" --resume None --val_step 1000 --use_metric --cider_weight 10 --metric_samples random --metric_div 6 --data_percentage 10
+```
+
+* Train Flickr30K models:
+Run `train_f30k.py` using the SAM, e.a. using soft sampling, metric margin division 10, weight on the cider loss 5 and on full dataset:
+```bash
+python train_f30k.py --data_path "$DATA_PATH" --model_name "$PATH_TO_SAVE" --resume None --val_step 1000 --use_metric --metric_samples soft --metric_div 10 --cider_weight 5 --data_percentage 100
+```
+
+## Evaluate
+
+
+
 ## Reference
 
 If you found this research, metric proposed or code useful, please cite the following paper:
